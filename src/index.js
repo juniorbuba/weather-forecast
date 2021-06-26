@@ -8,12 +8,13 @@ const geocode = require('./utils/geocode')
 const pathToPublic = path.join(__dirname, '../public')
 const partialsPath = path.join(__dirname, '../templates/partials')
 const errorPagesPath = path.join(__dirname, '../templates/partials')
+const pathToTemplates = path.join(__dirname, '../templates/views')
 
 const app = express()
 const port = process.env.PORT || 5128
 
 app.set('view engine', 'hbs')
-app.set('views', '../templates/views')
+app.set('views', pathToTemplates)
 app.use(express.static(pathToPublic))
 
 hbs.registerPartials(partialsPath)
