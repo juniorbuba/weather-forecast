@@ -10,6 +10,7 @@ const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const weather = document.querySelector('#weather');
 const errorMsg = document.querySelector('#error');
+const searchItem = document.querySelector("#searchItem")
 
 weather.textContent = ""
 
