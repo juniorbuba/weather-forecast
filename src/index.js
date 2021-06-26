@@ -10,6 +10,7 @@ const partialsPath = path.join(__dirname, '../templates/partials')
 const errorPagesPath = path.join(__dirname, '../templates/partials')
 
 const app = express()
+const port = process.env.PORT || 5128
 
 app.set('view engine', 'hbs')
 app.set('views', '../templates/views')
@@ -94,6 +95,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(5128, () => {
-    console.log("Server running on port 5128")
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`)
 })
